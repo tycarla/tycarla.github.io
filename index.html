@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>Carla Ty </span></a>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+        <i class="fa-solid fa-bars" id="menu-icons"></i>
+        
+        <button class="visit-btn">Visit Github</button>
+
+        <!-- Dark mode switch added nicely -->
+        <div class="toggle-container">
+            <label class="switch">
+            <input type="checkbox" id="toggle-theme">
+            <span class="slider">
+                <span class="icon" id="theme-icon">🌙</span>
+              </span>
+            </label>
+        </div>
+          
+    </header>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <img src="Profile Pic 1.jpg" alt="">
+
+            <div class="info-box">
+                <div class="text">
+                    <h3>Hi, I'm</h3>
+                    <h1>Carla Ty</h1>
+                    <span>Computer Engineering Student</span>
+                </div>
+
+            <div class="btn-group">
+                <a href="TY, CARLA_BS Computer Engineering _Resume.pdf" download class="btn">Download CV</a>
+                <div class="btn" id="contact-button" onclick="openGmail()">Contact</div>
+            </div>
+
+            <div class="socials">
+                <a href="https://github.com/tycarla" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/carla-ty-45b9911a3/" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <section id="experience" class="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-info">
+            <div class="grid">
+                <div class="grid-card">
+                    <i class="fa-solid fa-school"></i>
+                    <span>Graduating Student of Computer Engineer</span>
+                    <h3> 4 Years </h3>
+                    <p>As a Computer Engineering Student, I have developed 
+                        experience in both hardware and software systems, focusing 
+                        on designing, analyzing, and implementing computing solutions. 
+                        With hands-on experience from various projects, I am eager to apply 
+                        my skills in a professional setting and continue advancing my knowledge.
+                    </p>
+                </div>
+
+                <div class="grid-card">
+                    <i class="fa-solid fa-microchip"></i>
+                    <span>Embedded systems</span>
+                    <h3> 4 Years </h3>
+                    <p>I have hands-on experience with Arduino Uno, ESP32, and ESP8266, utilizing 
+                        various libraries to implement technical concepts learned in embedded systems. 
+                        My work includes integrating a wide range of components such as sensors, servo 
+                        motors, LEDs, buzzers, relays, and displays in real-time embedded systems and IoT 
+                        applications. This experience has strengthened my understanding of microcontroller 
+                        programming and the development of responsive, connected devices.
+                    </p>
+                </div>
+
+                <div class="grid-card">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Artifical Intelligence</span>
+                    <h3> 4 Years </h3>
+                    <p>I have experience in AI through my thesis study focused on bamboo growth habits, utilizing 
+                        image processing techniques for identification. I employed the YOLO algorithm on a Raspberry Pi 
+                        to analyze and recognize patterns, enhancing my understanding of machine learning and its 
+                        applications in environmental studies.
+                    </p>
+                </div>
+
+                <div class="grid-card">
+                    <i class="fa-solid fa-network-wired"></i>
+                    <span>CISCO Networking</span>
+                    <h3> 4 Years </h3>
+                    <p>I have gained extensive knowledge in Cisco networking, learning to 
+                        configure routers, manage servers, and encrypt passwords, among other topics. 
+                        Additionally, I have experience working with AWS cloud infrastructure, focusing 
+                        on backend development for various projects. This combination of skills has enhanced
+                        my understanding of network management and cloud computing.
+                    </p>
+                </div>
+            </div>
+            <img src="Profile Pic 1.jpg" alt="">
+        </div>
+
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 class="section-title">Recent Projects</h2>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <img src="smart bike.jpg" alt="">
+                <h3>Smart Bicycle</h3>
+                <h4>Technologies Used: Arduino Uno </h4>
+                <p> 
+                    • Demonstrates a Smart Bicycle distance alert system for cyclist safety. <br>
+                    • Addresses the need for cyclist protection using ultrasonic sensors, LED <br>
+                    indicators, a microcontroller Arduino Uno, LCD display, and a buzzer. <br>
+                    • Alerts cyclists about approaching vehicles from behind with a multi-faceted warning system.<br>
+                    • Incorporates a manual turning signal system for enhanced situational 
+                    awareness. <br>
+                    • Features three buttons for signaling: left, right, and off. <br>
+                    - Pressing left or right triggers corresponding blinking yellow LEDs to 
+                    indicate direction. <br>
+                    - The middle button turns off the signal. <br>
+                    • LCD display shows safety recommendations and messages to the 
+                    cyclist. <br>
+                    
+                </p>
+                <div class="btn-group">
+                    <div class="btn">Live Demo</div>
+                    <div class="btn">Github Repo</div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="bamboo growth habits.jpg" alt="">
+                <h3>Image Classification with Bamboo using YOLOv5 algorithm</h3>
+                <h4>Technologies Used: Roboflow, Raspberry Pi 4, Ubuntu OS, RPI touchscreen</h4>
+                <p> • Develop a device to distinguish between running and clumping bamboo growth habits using image data <br>
+                    • Utilize the YOLOv5 algorithm to automatically detect and classify bamboo growth habits patterns, allowing for 
+                    efficient processing of image-based datasets  <br>
+                    • Analyzed the performance of the created model using a confusion matrix <br>
+                    • Evaluate the practical applicability of the device and algorithm in real-world bamboo habitats <br>
+
+            
+                </p>
+                <div class="btn-group">
+                    <div class="btn">Live Demo</div>
+                    <div class="btn">Github Repo</div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="fitpocket.PNG" alt="">
+                <h3>Clorthing Application's <User-Interface></User-Interface></h3>
+                <h4>Technologies Used: Figma</h4>
+                <p> Designed and implemented a user-friendly interface for an <br>
+                    application, integrating essential features such as a Welcome <br>
+                    Page, Sign-Up/Log-In Page, Search Bar, Notification Tool, <br>
+                    Payment Page, Delivery Page, Menu Bar, Settings, and more. <br>
+                    The interface focuses on intuitive navigation and accessibility <br> 
+                    to enhance the overall user experience while maintaining <br>
+                    functionality and aesthetic appeal.  <br>
+                    
+                </p>
+                <div class="btn-group">
+                    <div class="btn">Live Demo</div>
+                    <div class="btn">Github Repo</div>
+                </div>
+            </div>
+
+        </div>        
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="input-box">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="input">
+                <input type="text" id="user-email" placeholder="example@email.com">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <div class="btn" id="submit-button">Submit</div>
+        </div>
+    </section>
+
+    <footer>
+        <ul>
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+        <p class="copyright">© All Rights Reserved | Carla Ty</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
