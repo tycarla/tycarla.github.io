@@ -103,6 +103,72 @@ li a:hover::before{
     cursor: pointer;
 }
 
+/* Toggle Container for dark and light mode */
+/* Base styles */
+.toggle-container {
+    display: flex;
+    align-items: center;
+  }
+
+/* Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 25px;
+  }
+  
+/* Hide default checkbox */
+.switch input {
+  display: none;
+}
+  
+/* Slider background */
+.slider {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+/* Sun/Moon icon */
+.slider .icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-10%);
+    font-size: 23px;
+    transition: left 0.5s;
+  }
+  
+  /* Checked Style */
+  input:checked + .slider {
+    background-color: #666;
+  }
+
+  /* When checked, move the icon to right */
+  input:checked + .slider .icon {
+    left: 35px;
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  body.dark-mode a {
+    color: #90caf9;
+  }
+  
+  body.dark-mode button {
+    background-color: #333;
+    color: white;
+  }
+
 section{
     min-height: 100vh;
     padding: 8rem 12%;
@@ -423,16 +489,17 @@ footer ul li a{
 
 @media(max-width:600px){
     header #menu-icon{
-        display:  block;
+        display: flex;
     }
     .nav-links{
         position: absolute;
         top: 100%;
+        left: 0;
+        right: 0;
         margin-top: 1rem;
         width: 100%;
         padding: 1rem;
         color: white;
-        display: flex;
         flex-direction: column;
         text-align: center;
         background: rgba(0, 0, 0, 0.9);
@@ -440,18 +507,25 @@ footer ul li a{
         display: none;
     }
     .nav-links li{
-        margin-top: 1.5rem;
+        margin-top: 1rem;
         padding: 1rem;
     }
     .nav-links.active{
-        display: block;
+        display: flex;
     }
     header{
         padding: 1rem 5rem;
-        gap: 8rem;
+        gap: 1rem;
+        justify-content: space-between;
+        align-items: center;
     }
     header .logo{
         font-size: 1.5rem;
+    }
+    .toggle-container {
+        margin-left: auto;
+        margin-top: 0;
+        position: relative;
     }
     .about-container img{
         width: 80vw;
@@ -469,68 +543,3 @@ footer ul li a{
     }
 }
 
-/* Toggle Container for dark and light mode */
-/* Base styles */
-.toggle-container {
-    display: flex;
-    align-items: center;
-  }
-
-/* Switch */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 100px;
-    height: 25px;
-  }
-  
-/* Hide default checkbox */
-.switch input {
-  display: none;
-}
-  
-/* Slider background */
-.slider {
-    position: relative;
-    width: 60px;
-    height: 30px;
-    background-color: #ccc;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-/* Sun/Moon icon */
-.slider .icon {
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-10%);
-    font-size: 23px;
-    transition: left 0.5s;
-  }
-  
-  /* Checked Style */
-  input:checked + .slider {
-    background-color: #666;
-  }
-
-  /* When checked, move the icon to right */
-  input:checked + .slider .icon {
-    left: 35px;
-  }
-  
-  /* Dark Mode */
-  body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-  }
-  
-  body.dark-mode a {
-    color: #90caf9;
-  }
-  
-  body.dark-mode button {
-    background-color: #333;
-    color: white;
-  }
